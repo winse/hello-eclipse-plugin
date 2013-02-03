@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" deactivate="deactivate" name="sample.http.ds.UserHelper">
+   <implementation class="sample.http.ds.UserHelper"/>
+   <reference bind="setService" cardinality="1..1" interface="sample.http.ds.UserService" name="UserService" unbind="unSetService"/>
+</scr:component>

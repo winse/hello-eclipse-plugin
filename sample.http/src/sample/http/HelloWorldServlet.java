@@ -7,12 +7,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import sample.http.ds.UserHelper;
+
 public class HelloWorldServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/html");
-		resp.getWriter().write("<html><body>Hello World -- sample servlet</body></html>"); //$NON-NLS-1$
+		resp.getWriter().write("<html><body>" 
+				+ UserHelper.getInstance().getService().sayHello(req.getParameter("username")) 
+				+ "</body></html>"); //$NON-NLS-1$
 		
 //		resp.sendRedirect("/helloworld.html");
 		
