@@ -34,7 +34,7 @@ public class UserHelper {
 
 	protected void unSetService(UserService manager) {
 		System.out.println("unregister user-service : " + manager);
-		this.service = null;
+//		this.service = null;
 	}
 
 }
