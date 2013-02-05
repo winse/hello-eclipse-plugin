@@ -58,7 +58,7 @@ public class SampleView extends ViewPart {
 		public void dispose() {
 		}
 		public Object[] getElements(Object parent) {
-			return new String[] { "One", "Two", "Three" };
+			return StringWrapper.wrapper(new String[] { "One", "Two", "Three" });
 		}
 	}
 	class ViewLabelProvider extends LabelProvider implements ITableLabelProvider {
@@ -99,6 +99,8 @@ public class SampleView extends ViewPart {
 		hookContextMenu();
 		hookDoubleClickAction();
 		contributeToActionBars();
+		
+		getSite().setSelectionProvider(viewer);
 	}
 
 	private void hookContextMenu() {
