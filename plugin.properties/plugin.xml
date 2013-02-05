@@ -43,5 +43,51 @@
          </adapter>
       </factory>
    </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+      <propertyContributor
+            contributorId="plugin.properties.views.SampleView">
+         <propertyCategory
+               category="Sample"></propertyCategory>
+         <propertyCategory
+               category="AdvancedCategory"></propertyCategory>
+      </propertyContributor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs
+            contributorId="plugin.properties.views.SampleView">
+         <propertyTab
+               category="AdvancedCategory"
+               id="plugin.properties.advancedTab"
+               label="Advanced">
+         </propertyTab>
+         <propertyTab
+               category="Sample"
+               id="plugin.properties.sampleTab"
+               label="Sample">
+         </propertyTab>
+      </propertyTabs>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections
+            contributorId="plugin.properties.views.SampleView">
+         <propertySection
+               class="org.eclipse.ui.views.properties.tabbed.AdvancedPropertySection"
+               id="plugin.properties.advanceSection"
+               tab="plugin.properties.advancedTab">
+            <input
+                  type="plugin.properties.views.StringWrapper">
+            </input>
+         </propertySection>
+         <propertySection
+               class="plugin.properties.section.StringTypeSection"
+               filter="plugin.properties.section.StringFilter"
+               id="plugin.properties.sampleSection"
+               tab="plugin.properties.sampleTab">
+         </propertySection>
+      </propertySections>
+   </extension>
 
 </plugin>

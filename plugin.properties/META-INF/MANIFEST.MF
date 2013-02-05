@@ -5,7 +5,8 @@ Bundle-SymbolicName: plugin.properties;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: plugin.properties.Activator
 Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime
+ org.eclipse.core.runtime,
+ org.eclipse.ui.views.properties.tabbed;bundle-version="3.5.200"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Import-Package: org.eclipse.ui.views.properties

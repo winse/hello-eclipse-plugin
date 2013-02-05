@@ -7,6 +7,10 @@ public class StringWrapper {
 	public StringWrapper(String origin) {
 		this.origin = origin;
 	}
+	
+	public void setValue(String value){
+		this.origin = value;
+	}
 
 	public String value() {
 		return origin;
