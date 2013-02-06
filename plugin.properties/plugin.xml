@@ -46,7 +46,8 @@
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
       <propertyContributor
-            contributorId="plugin.properties.views.SampleView">
+            contributorId="plugin.properties.views.SampleView"
+            labelProvider="org.eclipse.jface.viewers.LabelProvider">
          <propertyCategory
                category="Sample"></propertyCategory>
          <propertyCategory
